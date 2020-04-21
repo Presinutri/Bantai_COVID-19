@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_tips">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="220dp"
+            app:cardCornerRadius="20dp">
+
+            <ImageView
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/productive"
+                android:scaleType="fitCenter"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="240dp"
+            android:layout_height="180dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginLeft="151dp"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/artikel_title"
+                    android:layout_width="152dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/tips_padding"
+                    android:layout_marginTop="@dimen/tips_padding"
+                    android:text="Judul Artikel"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:id="@+id/artikel_description"
+                    android:layout_width="152dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/artikel_title"
+                    android:layout_marginLeft="@dimen/tips_padding"
+                    android:layout_marginTop="8dp"
+                    android:text="Artikel Ini Berisikan tentang bla bla.."
+                    android:textSize="14dp"/>
+
+            </RelativeLayout>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+</RelativeLayout>
