@@ -6,24 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment"
-    android:background="@drawable/beranda">
+    android:background="@drawable/home">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/judul"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="90dp"
-            android:layout_marginLeft="21dp"
-            android:src="@drawable/judul"/>
-
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="264dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="255dp"
             android:background="@drawable/white_background">
 
             <TextView
@@ -60,6 +52,15 @@
                 app:cardElevation="10dp"
                 android:layout_below="@id/updateHarian_timestamp">
 
+                <ProgressBar
+                    android:id="@+id/progress_circular_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:indeterminateDrawable="@drawable/loading"
+                    android:indeterminate="true"
+                    android:layout_gravity="center"/>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -74,14 +75,15 @@
                         android:gravity="center">
 
                         <TextView
+                            android:id="@+id/id_positif"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="4557"
+                            android:text="-"
                             android:textColor="@color/positif"
                             android:textSize="24dp"/>
 
                         <TextView
-                            android:id="@+id/profil_umur"
+                            android:id="@+id/label_positif"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Positif"
@@ -97,14 +99,15 @@
                         android:gravity="center">
 
                         <TextView
+                            android:id="@+id/id_sembuh"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="380"
+                            android:text="-"
                             android:textColor="@color/sembuh"
                             android:textSize="24dp"/>
 
                         <TextView
-                            android:id="@+id/profil_gender"
+                            android:id="@+id/label_sembuh"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Sembuh"
@@ -120,14 +123,15 @@
                         android:gravity="center">
 
                         <TextView
+                            android:id="@+id/id_meninggal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="399"
+                            android:text="-"
                             android:textColor="@color/meninggal"
                             android:textSize="24dp"/>
 
                         <TextView
-                            android:id="@+id/profil_pencapaian"
+                            android:id="@+id/label_meninggal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Meninggal"
@@ -243,7 +247,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/cucitangan"/>
+                            android:src="@drawable/cuci_tangan"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -264,7 +268,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/PhysicalDistancing"/>
+                            android:src="@drawable/physical_distancing"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -282,7 +286,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/PakaiMasker"/>
+                            android:src="@drawable/pakai_masker"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -308,7 +312,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/EtikaBersin"/>
+                            android:src="@drawable/etika_bersin"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -329,7 +333,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/TetapdiRumah"/>
+                            android:src="@drawable/tetap_di_rumah"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -348,7 +352,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/TidakMenyentuhMulut"/>
+                            android:src="@drawable/tidak_sentuh_mulut"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -367,7 +371,7 @@
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_marginTop="18dp"
-                android:layout_marginBottom="18dp">
+                android:layout_marginBottom="68dp">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="320dp"
@@ -385,7 +389,7 @@
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/callcenter"/>
+                            android:src="@drawable/call_center"/>
 
                         <TextView
                             android:layout_width="wrap_content"

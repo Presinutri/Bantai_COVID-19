@@ -1,9 +1,11 @@
 package com.practice.bantaicovid_19.ui.home;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,24 +14,65 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.practice.bantaicovid_19.R;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.lang.ref.ReferenceQueue;
 
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private TextView totalPositif, totalSembuh, totalMeninggal;
+    private ProgressBar progressBar;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        //call view
+        totalPositif = root.findViewById(R.id.id_positif);
+        totalSembuh = root.findViewById(R.id.id_sembuh);
+        totalMeninggal = root.findViewById(R.id.id_meninggal);
+        progressBar = root.findViewById(R.id.progress_circular_home);
+
+        //call Volley
+        getData();
+        
+        return root;
+    }
+
+    private void getData() {
+        RequestQueue queue = Volley.newRequestQueue(getActivity());
+        String url = "https://corona.lmao.ninja/v2/countries/indonesia";
+        StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
+            public void onResponse(String response) {
+                progressBar.setVisibility(View.GONE);
+                try {
+                    JSONObject jsonObject = new JSONObject(response.toString());
+
+                    totalPositif.setText(jsonObject.getString("cases"));
+                    totalSembuh.setText(jsonObject.getString("recovered"));
+                    totalMeninggal.setText(jsonObject.getString("deaths"));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                progressBar.setVisibility(View.GONE);
+                Log.d("Error Response", error.toString());
             }
         });
-        return root;
+        queue.add(request);
     }
 }
