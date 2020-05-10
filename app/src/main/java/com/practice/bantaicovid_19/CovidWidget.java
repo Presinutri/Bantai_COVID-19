@@ -4,21 +4,23 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.widget.RemoteViews;
+import com.practice.bantaicovid_19.R;
 
 /**
  * Implementation of App Widget functionality.
  */
-public class InfoCovidWidget extends AppWidgetProvider {
+public class CovidWidget extends AppWidgetProvider {
+    private static final String mSharedPrefFile =
+            "com.practice.bantaicovid_19";
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
 
         CharSequence widgetText = context.getString(R.string.appwidget_text);
         // Construct the RemoteViews object
-        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.info_covid_widget);
-        views.setTextViewText(R.id.id_positif, String.valueOf(appWidgetId));
-        views.setTextViewText(R.id.id_sembuh, String.valueOf(appWidgetId));
-        views.setTextViewText(R.id.id_meninggal, String.valueOf(appWidgetId));
+        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.covid_widget);
+        views.setTextViewText(R.id.appwidget_text, widgetText);
+
         // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, views);
     }
