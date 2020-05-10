@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimary">#27AE60</color>
+    <color name="colorPrimaryDark">#219653</color>
     <color name="colorAccent">#03DAC5</color>
+
     <color name="positif">#FDC73E</color>
     <color name="sembuh">#27AD60</color>
     <color name="meninggal">#E81515</color>
+
+    <color name="ijoMantep">#27AE60</color>
+    <color name="ijoGelap">#219653</color>
+
 </resources>

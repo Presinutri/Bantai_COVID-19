@@ -3,6 +3,41 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
+
+
+    <string-array name="tips_content">
+        <item>Pandemi COVID-19 bukan hanya mengancam kesehatan fisik, tetapi juga kesehatan mental. Nah, berikut ini kami bahas cara agar tidak stres selama pandemi COVID-19 yang bikin sistem imun lebih baik.</item>
+        <item>Salah satu cara melepas kepenatan dan depresi karena harus di rumah akibat pandemi Covid-19, adalah dengan berkebun. Pelbagai manfaat bisa didapat dari berkebun untuk kesehatan mental dan jiwa. World Health Organization (WHO) menyebut banyak manfaat kesehatan berkebun di luar ruangan. Salah satunya adalah mencegah penyakit kronis tapi tahukah Anda manfaat kesehatan dari berkebun? Berikut rinciannya</item>
+        <item>WHO melalui kampanye #healthyathome dan beactive mendorong masyarakat dunia untuk melakukan berbagai aktivitas di rumah. WHO juga merekomendasi untuk aktif selama 30 menit bagi orang dewasa, dan 1 jam untuk anak-anak per hari. Apa saja aktivitas yang bisa kamu lakukan di rumah?</item>
+        <item>Pandemi infeksi virus corona atau COVID-19 membuat semua orang harus berdiam di rumah, mulai dari orangtua hingga anak-anak. Para orangtua pun memutar otak untuk mencari aktivitas anak yang menyenangkan dan antibosan, namun tetap memberikan manfaat untuk tumbuh kembang Si Kecil. Apa saja, ya, yang bisa dilakukan? Simak di artikel ini.</item>
+        <item>Berpuasa di tengah pandemi virus corona Covid-19 bukanlah perkara mudah. Sebab, tubuh harus menahan rasa lapar dan haus, sekaligus menjaga sistem imun agar terhindar dari berbagai macam virus. Maka dari itu, kenalilah tips puasa di tengah pandemi corona ini, supaya kebugaran dan sistem imun tubuh tetap terjaga terus!</item>
+    </string-array>
+
+    <string-array name="tips_drawable">
+        <item>@drawable/photo_1</item>
+        <item>@drawable/photo_2</item>
+        <item>@drawable/photo_3</item>
+        <item>@drawable/photo_4</item>
+        <item>@drawable/photo_5</item>
+    </string-array>
+
+    <string-array name="tips_link">
+        <item>https://ilovelife.co.id/blog/8-cara-agar-tidak-stres-selama-pandemi-covid-19-yang-bikin-sistem-imun-lebih-baik/</item>
+        <item>https://www.alinea.id/gaya-hidup/manfaat-berkebun-untuk-kesehatan-b1ZMO9tYI</item>
+        <item>https://fimela.com/lifestyle-relationship/read/4212462/6-rekomendasi-aktivitas-di-rumah-dari-who-agar-tetap-bugar-dan-sehat</item>
+        <item>https://www.sehatq.com/artikel/ide-aktivitas-anak-di-rumah-agar-tak-bosan-selama-wabah-corona</item>
+        <item>https://www.sehatq.com/artikel/berbagai-tips-puasa-di-tengah-pandemi-virus-corona-covid-19</item>
+    </string-array>
+
+    <string-array name="tips_title">
+        <item>8 Cara Agar Tidak Stres Selama Pandemi COVID-19 yang Bikin Sistem Imun Lebih Baik</item>
+        <item>Manfaat berkebun saat pandemi terjadi</item>
+        <item>6 Rekomendasi Aktivitas di Rumah dari WHO Agar Tetap Bugar dan Sehat</item>
+        <item>Anak Bosan Karena Corona? Ajak Lakukan Aktivitas Ini, Yuk!</item>
+        <item>Berbagai Tips Puasa di Tengah Pandemi Virus Corona Covid-19</item>
+    </string-array>
+
 </resources>
