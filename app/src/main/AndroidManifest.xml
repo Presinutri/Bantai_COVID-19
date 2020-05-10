@@ -12,17 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <receiver android:name=".CovidWidget">
+        <receiver android:name=".BantaiCovidWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/covid_widget" />
+                android:resource="@xml/bantai_covid_widget_info" />
         </receiver>
 
-        <activity android:name=".TipsDetailActivity"></activity>
+        <activity android:name=".TipsDetailActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

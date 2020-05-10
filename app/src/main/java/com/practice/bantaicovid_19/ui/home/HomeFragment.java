@@ -27,16 +27,19 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.lang.ref.ReferenceQueue;
+import java.util.Calendar;
 
 public class HomeFragment extends Fragment {
 
     private TextView totalPositif, totalSembuh, totalMeninggal;
     private ProgressBar progressBar;
+    public Calendar updateDate = Calendar.getInstance();
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
+
         //call view
         totalPositif = root.findViewById(R.id.id_positif);
         totalSembuh = root.findViewById(R.id.id_sembuh);
@@ -44,12 +47,12 @@ public class HomeFragment extends Fragment {
         progressBar = root.findViewById(R.id.progress_circular_home);
 
         //call Volley
-        getData();
+        getSpreadData();
         
         return root;
     }
 
-    private void getData() {
+    private void getSpreadData() {
         RequestQueue queue = Volley.newRequestQueue(getActivity());
         String url = "https://corona.lmao.ninja/v2/countries/indonesia";
         StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
@@ -74,5 +77,7 @@ public class HomeFragment extends Fragment {
             }
         });
         queue.add(request);
+
+
     }
 }
