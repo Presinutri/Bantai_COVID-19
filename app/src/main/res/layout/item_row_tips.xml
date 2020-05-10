@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/background_tips">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
 
     <FrameLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="180dp"
@@ -15,10 +17,11 @@
             app:cardCornerRadius="20dp">
 
             <ImageView
-                android:layout_width="240dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/tips_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:src="@drawable/productive"
-                android:scaleType="fitCenter"/>
+                android:scaleType="centerCrop"/>
 
         </androidx.cardview.widget.CardView>
 
@@ -31,34 +34,28 @@
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:padding="@dimen/item_tips_padding">
 
                 <TextView
-                    android:id="@+id/artikel_title"
+                    android:id="@+id/tips_title"
                     android:layout_width="152dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/tips_padding"
-                    android:layout_marginTop="@dimen/tips_padding"
                     android:text="Judul Artikel"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"
-                    android:textSize="18dp"/>
+                    android:textSize="16sp"/>
 
                 <TextView
-                    android:id="@+id/artikel_description"
+                    android:id="@+id/tips_content"
                     android:layout_width="152dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/artikel_title"
-                    android:layout_marginLeft="@dimen/tips_padding"
+                    android:layout_below="@+id/tips_title"
                     android:layout_marginTop="8dp"
                     android:text="Artikel Ini Berisikan tentang bla bla.."
-                    android:textSize="14dp"/>
+                    android:textSize="14sp"/>
 
             </RelativeLayout>
-
-
-
-
         </androidx.cardview.widget.CardView>
     </FrameLayout>
 

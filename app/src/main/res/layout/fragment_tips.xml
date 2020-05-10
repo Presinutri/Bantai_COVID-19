@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity"
-    android:theme="@style/NoActionBar"
-    android:background="@drawable/background_tips"
-    android:padding="@dimen/tips_padding"
-    android:scrollbars="none">
+    android:background="@drawable/background_tips">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ProgressBar
-            android:id="@+id/progress_bar"
-            style="?android:progressBarStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_centerInParent="true"
-            android:visibility="gone"/>
+        android:id="@+id/tips_appbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/tips_padding"
+        android:layout_marginBottom="16dp">
 
         <RelativeLayout
             android:id="@+id/tips_title"
@@ -65,15 +64,22 @@
             android:src="@drawable/settings_icon"
             android:layout_alignParentRight="true"/>
 
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_below="@+id/tips_appbar"
+        android:layout_marginBottom="56dp">
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_tips"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             tools:listitem="@layout/item_row_tips"
-            android:layout_below="@+id/tips_title"
-            android:layout_marginTop="42dp" />
+            android:layout_marginLeft="16dp"/>
 
-    </RelativeLayout>
-
-</ScrollView>
+    </ScrollView>
+</RelativeLayout>
 

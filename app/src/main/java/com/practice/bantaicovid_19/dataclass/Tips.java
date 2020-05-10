@@ -17,6 +17,10 @@ public class Tips implements Parcelable {
         this.photo = photo;
     }
 
+    public Tips() {
+
+    }
+
     protected Tips(Parcel in) {
         title = in.readString();
         link = in.readString();
