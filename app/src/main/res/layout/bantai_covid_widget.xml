@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/white_background"
+    android:background="@drawable/background_widget"
     android:padding="@dimen/widget_margin">
 
         <LinearLayout
@@ -20,7 +20,7 @@
                 android:gravity="center">
 
                 <TextView
-                    android:id="@+id/id_positif"
+                    android:id="@+id/widget_positif"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="-"
@@ -44,7 +44,7 @@
                 android:gravity="center">
 
                 <TextView
-                    android:id="@+id/id_sembuh"
+                    android:id="@+id/widget_sembuh"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="-"
@@ -68,7 +68,7 @@
                 android:gravity="center">
 
                 <TextView
-                    android:id="@+id/id_meninggal"
+                    android:id="@+id/widget_meninggal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="-"
