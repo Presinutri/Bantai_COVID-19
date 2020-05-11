@@ -40,4 +40,78 @@
         <item>Berbagai Tips Puasa di Tengah Pandemi Virus Corona Covid-19</item>
     </string-array>
 
+    <string-array name="provinsi">
+        <item>Aceh</item>
+        <item>Sumatera Utara</item>
+        <item>Sumatera Barat</item>
+        <item>Riau</item>
+        <item>Jambi</item>
+        <item>Sumatera Selatan</item>
+        <item>Bengkulu</item>
+        <item>Lampung</item>
+        <item>Kepulauan Bangka Belitung</item>
+        <item>Kepulauan Riau</item>
+        <item>DKI Jakarta</item>
+        <item>Jawa Barat</item>
+        <item>Jawa Tengah</item>
+        <item>Daerah Istimewa Yogyakarta</item>
+        <item>Jawa Timur</item>
+        <item>Banten</item>
+        <item>Bali</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Timur</item>
+        <item>Kalimantan Barat</item>
+        <item>Kalimantan Tengah</item>
+        <item>Kalimantan Selatan</item>
+        <item>Kalimantan Timur</item>
+        <item>Kalimantan Utara</item>
+        <item>Sulawesi Utara</item>
+        <item>Sulawesi Tengah</item>
+        <item>Sulawesi Selatan</item>
+        <item>Sulawesi Tenggara</item>
+        <item>Gorontalo</item>
+        <item>Sulawesi Barat</item>
+        <item>Maluku</item>
+        <item>Maluku Utara</item>
+        <item>Papua</item>
+        <item>Papua Barat</item>
+    </string-array>
+
+    <string-array name="call_center">
+        <item>0651-7319111</item>
+        <item>082164902482</item>
+        <item>081363478384</item>
+        <item>0761-23810</item>
+        <item>081273503486</item>
+        <item>081271027850</item>
+        <item>085268913505</item>
+        <item>081274156087</item>
+        <item>08117818600</item>
+        <item>081378790002</item>
+        <item>081388376955</item>
+        <item>085697391854</item>
+        <item>082313600560</item>
+        <item>08112764800</item>
+        <item>081334367800</item>
+        <item>085215779659</item>
+        <item>085792240799</item>
+        <item>081805787239</item>
+        <item>08113827710</item>
+        <item>081292119119</item>
+        <item>08125086776</item>
+        <item>082157718672</item>
+        <item>112</item>
+        <item>112</item>
+        <item>112</item>
+        <item>0811404119</item>
+        <item>082154021119</item>
+        <item>040-1322896</item>
+        <item>081143101000</item>
+        <item>081247758484</item>
+        <item>081343143438</item>
+        <item>0921-6210001</item>
+        <item>082197837678</item>
+        <item>1500141</item>
+    </string-array>
+
 </resources>
