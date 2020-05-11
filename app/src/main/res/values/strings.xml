@@ -1,14 +1,35 @@
 <resources>
     <string name="app_name">Bantai COVID-19</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-
+    <string name="title_home">Beranda</string>
+    <string name="title_tips">Tips Menarik</string>
+    <string name="title_daerah">List per Daerah</string>
 
     <string name="call_center_title">Call Center Per Daerah</string>
     <string name="call_center_toast">Memilih daerah</string>
 
     <string name="appwidget_text">appwidget</string>
+
+    <string name="add_widget">Add widget</string>
+    <string name="update_harian_covid_19">Update Harian COVID-19</string>
+    <string name="terakhir_diperbaharui_14_april_2020">Terakhir diperbaharui 14 April 2020</string>
+    <string name="positif">Positif</string>
+    <string name="sembuh">Sembuh</string>
+    <string name="meninggal">Meninggal</string>
+    <string name="gejala_gejala">Gejala-gejala</string>
+    <string name="demam">Demam</string>
+    <string name="rasa_lelah">Rasa Lelah</string>
+    <string name="batuk_kering">Batuk Kering</string>
+    <string name="pilek">Pilek</string>
+    <string name="sakit_tenggorokan">Sakit Tenggorokan</string>
+    <string name="diare">Diare</string>
+    <string name="pencegahan">Pencegahan</string>
+    <string name="cuci_tangan">Cuci Tangan</string>
+    <string name="jaga_kontak_fisik">Jaga Kontak\n Fisik</string>
+    <string name="pakai_masker">Pakai Masker</string>
+    <string name="etika_bersin">Etika Bersin</string>
+    <string name="tetap_di_rumah">Tetap di\n Rumah</string>
+    <string name="tidak_sentuh_mulut">Tidak Sentuh\n Mulut</string>
+    <string name="list_call_center">List Call Center</string>
 
     <string-array name="tips_content">
         <item>Pandemi COVID-19 bukan hanya mengancam kesehatan fisik, tetapi juga kesehatan mental. Nah, berikut ini kami bahas cara agar tidak stres selama pandemi COVID-19 yang bikin sistem imun lebih baik.</item>
