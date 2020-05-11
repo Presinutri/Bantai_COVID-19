@@ -1,49 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/home">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/btn_settings"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:src="@drawable/settings_icon"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_alignParentRight="true"/>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:layout_marginTop="240dp"
-            android:background="@drawable/white_background"/>
+    android:layout_height="match_parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginTop="264dp">
-
-            <TextView
-                android:id="@+id/list_call_center_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:text="Call Center Provinsi di Indonesia"
-                />
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
 
             <RelativeLayout
                 android:id="@+id/list_header"
-                android:layout_below="@+id/list_call_center_title"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_marginTop="24dp">
@@ -51,7 +20,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="24dp"
+                    android:layout_marginLeft="16dp"
                     android:textSize="14dp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"
@@ -70,12 +39,22 @@
                     android:gravity="center" />
             </RelativeLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_listdaerah"
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/list_header"
-                tools:listitem="@layout/item_row_call_center" />
+                android:layout_below="@+id/list_header"
+                android:layout_marginBottom="16dp"
+                android:scrollbars="none">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_callcenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/list_header"
+                    tools:listitem="@layout/item_row_call_center" />
+
+            </ScrollView>
+
+
         </RelativeLayout>
-    </RelativeLayout>
-</ScrollView>
+</RelativeLayout>

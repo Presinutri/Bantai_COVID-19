@@ -20,7 +20,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="240dp"
+            android:layout_marginTop="200dp"
             android:background="@drawable/white_background">
 
             <ScrollView
@@ -38,7 +38,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="24dp"
-                        android:layout_marginTop="18dp"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:textColor="@android:color/black"

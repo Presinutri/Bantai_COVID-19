@@ -4,8 +4,11 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
-    <string name="appwidget_text">EXAMPLE</string>
-    <string name="add_widget">Add widget</string>
+
+    <string name="call_center_title">Call Center Per Daerah</string>
+    <string name="call_center_toast">Memilih daerah</string>
+
+    <string name="appwidget_text">appwidget</string>
 
     <string-array name="tips_content">
         <item>Pandemi COVID-19 bukan hanya mengancam kesehatan fisik, tetapi juga kesehatan mental. Nah, berikut ini kami bahas cara agar tidak stres selama pandemi COVID-19 yang bikin sistem imun lebih baik.</item>

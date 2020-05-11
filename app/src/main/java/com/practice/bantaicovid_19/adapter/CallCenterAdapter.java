@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,11 +14,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.practice.bantaicovid_19.R;
 import com.practice.bantaicovid_19.dataclass.CallCenter;
+import com.practice.bantaicovid_19.dataclass.Regional;
 
 import java.util.ArrayList;
 
 public class CallCenterAdapter extends RecyclerView.Adapter<CallCenterAdapter.ListViewHolder> {
     ArrayList mData = new ArrayList<CallCenter>();
+
+    public void setData(ArrayList<CallCenter> items) {
+        mData.clear();
+        mData.addAll(items);
+        notifyDataSetChanged();
+    }
 
     @NonNull
     @Override
@@ -29,6 +37,7 @@ public class CallCenterAdapter extends RecyclerView.Adapter<CallCenterAdapter.Li
     @Override
     public void onBindViewHolder(@NonNull CallCenterAdapter.ListViewHolder holder, int position) {
         final CallCenter data = (CallCenter) mData.get(position);
+        String message = holder.itemView.getContext().getResources().getString(R.string.call_center_toast) + " " + data.getProvinsi();
         holder.viewProvinsi.setText(data.getProvinsi());
         holder.viewCallCenter.setText(data.getCallCenter());
 
@@ -36,6 +45,7 @@ public class CallCenterAdapter extends RecyclerView.Adapter<CallCenterAdapter.Li
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", data.getCallCenter(), null));
+                Toast.makeText(holder.itemView.getContext(), message, Toast.LENGTH_SHORT).show();
                 holder.itemView.getContext().startActivity(intent);
             }
         });
