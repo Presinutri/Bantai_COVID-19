@@ -8,9 +8,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,6 +27,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.practice.bantaicovid_19.CallCenterActivity;
 import com.practice.bantaicovid_19.R;
+import com.practice.bantaicovid_19.SettingsActivity;
 import com.practice.bantaicovid_19.dataclass.CallCenter;
 
 import org.json.JSONException;
@@ -36,11 +39,13 @@ import static com.practice.bantaicovid_19.model.SpreadDataModel.PREFERENCE_MENIN
 import static com.practice.bantaicovid_19.model.SpreadDataModel.PREFERENCE_POSITIF;
 import static com.practice.bantaicovid_19.model.SpreadDataModel.PREFERENCE_SEMBUH;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener {
 
     private TextView totalPositif, totalSembuh, totalMeninggal;
     private ProgressBar progressBar;
     private View callCenter;
+    private ImageView settingsIcon;
+
     public Calendar updateDate = Calendar.getInstance();
 
     private SharedPreferences sharedPreferences;
@@ -57,17 +62,13 @@ public class HomeFragment extends Fragment {
         totalMeninggal = root.findViewById(R.id.id_meninggal);
         progressBar = root.findViewById(R.id.progress_circular_home);
         callCenter = root.findViewById(R.id.callcenter);
+        settingsIcon = root.findViewById(R.id.btn_settings);
 
         // call Volley
         getSpreadData();
 
-        callCenter.findViewById(R.id.callcenter).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent =new Intent(getActivity(), CallCenterActivity.class);
-                startActivity(intent);
-            }
-        });
+        callCenter.setOnClickListener(this);
+        settingsIcon.setOnClickListener(this);
 
         return root;
     }
@@ -100,6 +101,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onErrorResponse(VolleyError error) {
                 progressBar.setVisibility(View.GONE);
+                Toast.makeText(getActivity(), "Maaf tidak ada koneksi internet", Toast.LENGTH_SHORT).show();
                 Log.d("Error Response", error.toString());
             }
         });
@@ -113,5 +115,18 @@ public class HomeFragment extends Fragment {
         totalSembuh.setText(sharedPreferences.getString(PREFERENCE_SEMBUH, "-"));
         totalMeninggal.setText(sharedPreferences.getString(PREFERENCE_MENINGGAL, "-"));
         Log.d("pos", sharedPreferences.getString(PREFERENCE_POSITIF, "-"));
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.callcenter:
+                startActivity(new Intent(getActivity(), SettingsActivity.class));
+//                startActivity(new Intent(getActivity(), CallCenterActivity.class));
+                break;
+            case R.id.btn_settings:
+                startActivity(new Intent(getActivity(), SettingsActivity.class));
+                break;
+        }
     }
 }

@@ -30,6 +30,14 @@
     <string name="tetap_di_rumah">Tetap di\n Rumah</string>
     <string name="tidak_sentuh_mulut">Tidak Sentuh\n Mulut</string>
     <string name="list_call_center">List Call Center</string>
+    <string name="change_language_settings">Change Language</string>
+    <string name="language_settings">Pengaturan untuk mengubah bahasa aplikasi</string>
+    <string name="daily_notification_text">Pengaturan untuk mengaktifkan atau menonaktifkan notifikasi harian</string>
+    <string name="daily_notification">Notifikasi Harian</string>
+
+
+    <string name="daily_notification_on">Daily Notification On</string>
+    <string name="daily_notification_off">Daily Notification Off</string>
 
     <string-array name="tips_content">
         <item>Pandemi COVID-19 bukan hanya mengancam kesehatan fisik, tetapi juga kesehatan mental. Nah, berikut ini kami bahas cara agar tidak stres selama pandemi COVID-19 yang bikin sistem imun lebih baik.</item>
