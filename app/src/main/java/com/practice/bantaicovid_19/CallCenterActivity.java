@@ -9,8 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.practice.bantaicovid_19.adapter.CallCenterAdapter;
-import com.practice.bantaicovid_19.ui.notifications.CallCenterViewModel;
-import com.practice.bantaicovid_19.R;
+import com.practice.bantaicovid_19.viewmodel.CallCenterViewModel;
 
 public class CallCenterActivity extends AppCompatActivity {
 

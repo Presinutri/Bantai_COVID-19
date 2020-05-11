@@ -1,4 +1,4 @@
-package com.practice.bantaicovid_19.ui.home;
+package com.practice.bantaicovid_19.fragment;
 
 import android.content.Intent;
 import android.content.Context;

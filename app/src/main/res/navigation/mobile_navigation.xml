@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.practice.bantaicovid_19.ui.home.HomeFragment"
+        android:name="com.practice.bantaicovid_19.fragment.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.practice.bantaicovid_19.ui.notifications.TipsFragment"
-        android:label="@string/title_dashboard"
+        android:id="@+id/navigation_tips"
+        android:name="com.practice.bantaicovid_19.fragment.TipsFragment"
+        android:label="@string/title_tips"
         tools:layout="@layout/fragment_tips" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.practice.bantaicovid_19.ui.notifications.RegionalSpreadFragment"
-        android:label="@string/title_notifications"
+        android:id="@+id/navigation_regional"
+        android:name="com.practice.bantaicovid_19.fragment.RegionalSpreadFragment"
+        android:label="@string/title_daerah"
         tools:layout="@layout/fragment_regional_spread" />
 </navigation>

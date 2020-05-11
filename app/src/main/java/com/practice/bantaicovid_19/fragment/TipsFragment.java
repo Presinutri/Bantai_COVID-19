@@ -1,4 +1,4 @@
-package com.practice.bantaicovid_19.ui.notifications;
+package com.practice.bantaicovid_19.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.practice.bantaicovid_19.R;
 import com.practice.bantaicovid_19.adapter.TipsAdapter;
+import com.practice.bantaicovid_19.viewmodel.TipsViewModel;
 
 public class TipsFragment extends Fragment {
 

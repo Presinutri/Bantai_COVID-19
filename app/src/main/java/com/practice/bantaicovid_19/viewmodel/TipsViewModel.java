@@ -1,4 +1,4 @@
-package com.practice.bantaicovid_19.ui.notifications;
+package com.practice.bantaicovid_19.viewmodel;
 
 import android.content.Context;
 import android.content.res.TypedArray;

@@ -1,4 +1,4 @@
-package com.practice.bantaicovid_19.ui.home;
+package com.practice.bantaicovid_19.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
