@@ -41,7 +41,7 @@
                     android:textSize="18dp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"
-                    android:text="Update Harian COVID-19"
+                    android:text="@string/update_harian_covid_19"
                     />
 
                 <TextView
@@ -53,7 +53,7 @@
                     android:layout_marginTop="8dp"
                     android:textColor="@android:color/black"
                     android:textSize="14dp"
-                    android:text="Terakhir diperbaharui 14 April 2020"
+                    android:text="@string/terakhir_diperbaharui_14_april_2020"
                     />
 
                 <androidx.cardview.widget.CardView
@@ -101,7 +101,7 @@
                                 android:id="@+id/label_positif"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Positif"
+                                android:text="@string/positif"
                                 android:textColor="@android:color/black"
                                 android:paddingTop="5dp"/>
                         </LinearLayout>
@@ -125,7 +125,7 @@
                                 android:id="@+id/label_sembuh"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Sembuh"
+                                android:text="@string/sembuh"
                                 android:textColor="@android:color/black"
                                 android:paddingTop="5dp"/>
                         </LinearLayout>
@@ -149,7 +149,7 @@
                                 android:id="@+id/label_meninggal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Meninggal"
+                                android:text="@string/meninggal"
                                 android:textColor="@android:color/black"
                                 android:paddingTop="5dp"/>
                         </LinearLayout>
@@ -167,7 +167,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Gejala-gejala"
+                        android:text="@string/gejala_gejala"
                         android:textSize="18dp"
                         android:layout_marginLeft="24dp"
                         android:textColor="@android:color/black"
@@ -183,20 +183,20 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Demam"
+                            android:text="@string/demam"
                             android:textColor="@android:color/black"
                             android:layout_marginRight="40dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Rasa Lelah"
+                            android:text="@string/rasa_lelah"
                             android:textColor="@android:color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Batuk Kering"
+                            android:text="@string/batuk_kering"
                             android:textColor="@android:color/black"
                             android:layout_marginLeft="40dp"/>
                     </LinearLayout>
@@ -211,20 +211,20 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Pilek"
+                            android:text="@string/pilek"
                             android:textColor="@android:color/black"
                             android:layout_marginRight="40dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sakit Tenggorokan"
+                            android:text="@string/sakit_tenggorokan"
                             android:textColor="@android:color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Diare"
+                            android:text="@string/demam"
                             android:textColor="@android:color/black"
                             android:layout_marginLeft="40dp"/>
                     </LinearLayout>
@@ -241,7 +241,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pencegahan"
+                        android:text="@string/pencegahan"
                         android:textSize="18dp"
                         android:layout_marginLeft="24dp"
                         android:textColor="@android:color/black"
@@ -267,7 +267,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Cuci Tangan"
+                                android:text="@string/cuci_tangan"
                                 android:textColor="@android:color/black"/>
                         </LinearLayout>
 
@@ -288,7 +288,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Jaga Kontak\n       Fisik"
+                                android:gravity="center"
+                                android:text="@string/jaga_kontak_fisik"
                                 android:textColor="@android:color/black"/>
                         </LinearLayout>
 
@@ -306,7 +307,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Pakai Masker"
+                                android:text="@string/pakai_masker"
                                 android:textColor="@android:color/black"/>
                         </LinearLayout>
                     </LinearLayout>
@@ -332,7 +333,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Etika Bersin"
+                                android:text="@string/etika_bersin"
                                 android:textColor="@android:color/black"/>
                         </LinearLayout>
 
@@ -353,7 +354,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Tetap di\n Rumah"
+                                android:gravity="center"
+                                android:text="@string/tetap_di_rumah"
                                 android:textColor="@android:color/black"/>
                         </LinearLayout>
 
@@ -372,7 +374,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Tidak Sentuh\n       Mulut"
+                                android:gravity="center"
+                                android:text="@string/tidak_sentuh_mulut"
                                 android:textColor="@android:color/black"/>
                         </LinearLayout>
                     </LinearLayout>
@@ -409,7 +412,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="List Call Center"
+                                android:text="@string/list_call_center"
                                 android:textStyle="bold"
                                 android:textColor="@android:color/white"
                                 android:textSize="18dp"
