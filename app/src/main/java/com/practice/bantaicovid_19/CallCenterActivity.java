@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.practice.bantaicovid_19.R;
+
 public class CallCenterActivity extends AppCompatActivity {
 
     @Override

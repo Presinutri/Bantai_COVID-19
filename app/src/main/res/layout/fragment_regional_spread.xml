@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_listdaerah"
+    >
+
+    <RelativeLayout
+        android:id="@+id/container_region_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/white_background"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="24dp"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="320dp"
+                >
+
+                <TextView
+                    android:id="@+id/listdaerah_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:text="Data Penyebaran Daerah COVID-19"
+                    />
+
+                <TextView
+                    android:id="@+id/listdaerah_timestamp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/listdaerah_title"
+                    android:layout_marginTop="8dp"
+                    android:textSize="14dp"
+                    android:text="Terakhir diperbaharui 14 April 2020"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/list_header"
+                    android:layout_below="@+id/listdaerah_timestamp"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/abu"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:text="Provinsi"
+                        android:textAlignment="center"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="155dp"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/kuning"
+                        android:text="P"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="223dp"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/hijau"
+                        android:text="S"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="290dp"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/merah"
+                        android:text="M"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_listregional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/list_header"
+                    tools:listitem="@layout/item_row_listdaerah"
+                    />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
