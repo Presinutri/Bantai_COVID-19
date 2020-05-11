@@ -65,12 +65,14 @@ public class HomeFragment extends Fragment {
                 progressBar.setVisibility(View.GONE);
                 try {
                     JSONObject jsonObject = new JSONObject(response.toString());
-                    sharedPreferences = getActivity().getSharedPreferences("spread data widget", Context.MODE_PRIVATE);
-                    editor = sharedPreferences.edit();
-                    editor.putString(PREFERENCE_POSITIF, jsonObject.getString("cases"));
-                    editor.putString(PREFERENCE_SEMBUH, jsonObject.getString("recovered"));
-                    editor.putString(PREFERENCE_MENINGGAL, jsonObject.getString("deaths"));
-                    editor.apply();
+                    if (getActivity().getSharedPreferences("spread data widget", Context.MODE_PRIVATE) != null) {
+                        sharedPreferences = getActivity().getSharedPreferences("spread data widget", Context.MODE_PRIVATE);
+                        editor = sharedPreferences.edit();
+                        editor.putString(PREFERENCE_POSITIF, jsonObject.getString("cases"));
+                        editor.putString(PREFERENCE_SEMBUH, jsonObject.getString("recovered"));
+                        editor.putString(PREFERENCE_MENINGGAL, jsonObject.getString("deaths"));
+                        editor.apply();
+                    }
 
                     // set data
                     setSpreadData();

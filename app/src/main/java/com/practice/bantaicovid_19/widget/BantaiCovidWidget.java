@@ -24,7 +24,7 @@ import static com.practice.bantaicovid_19.model.SpreadDataModel.PREFERENCE_SEMBU
  */
 public class BantaiCovidWidget extends AppWidgetProvider {
 
-    private static long tigaJam = 108000L;
+    private static long seJam = 3600L;
     private TextView widgetPositif, widgetSembuh, widgetMeninggal;
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
@@ -57,7 +57,7 @@ public class BantaiCovidWidget extends AppWidgetProvider {
 
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         alarmManager.setInexactRepeating(AlarmManager.RTC, calendar.getTimeInMillis(),
-                tigaJam*1000, pendingUpdate);
+                seJam*1000, pendingUpdate);
 
         // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, views);

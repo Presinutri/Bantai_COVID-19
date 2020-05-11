@@ -15,11 +15,11 @@
         android:id="@+id/navigation_dashboard"
         android:name="com.practice.bantaicovid_19.ui.notifications.TipsFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_tips" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.practice.bantaicovid_19.ui.notifications.NotificationsFragment"
+        android:name="com.practice.bantaicovid_19.ui.notifications.RegionalSpreadFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_regional_spread" />
 </navigation>
