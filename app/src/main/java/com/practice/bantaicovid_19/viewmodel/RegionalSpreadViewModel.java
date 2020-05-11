@@ -3,6 +3,7 @@ package com.practice.bantaicovid_19.viewmodel;
 import android.content.Context;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.LiveData;
@@ -73,6 +74,7 @@ public class RegionalSpreadViewModel extends ViewModel {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                Toast.makeText(context, "Maaf tidak ada koneksi internet", Toast.LENGTH_SHORT).show();
                 Log.d("Error Response", error.toString());
             }
         });

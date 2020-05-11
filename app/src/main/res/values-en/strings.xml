@@ -29,4 +29,10 @@
     <string name="data_penyebaran_daerah_covid_19">Regional Spread  of COVID-19</string>
     <string name="terakhir_diperbaharui_daerah">Last updated on April 14, 2020</string>
     <string name="provinsi">Province</string>
+    <string name="change_language_settings">Change Language</string>
+    <string name="daily_notification">Daily Notification</string>
+    <string name="daily_notification_on">Daily Notification On</string>
+    <string name="daily_notification_off">Daily Notification Off</string>
+    <string name="language_settings">Settings for changing application language</string>
+    <string name="daily_notification_text">Turn on or turn off daily notification</string>
 </resources>
