@@ -67,7 +67,6 @@
                     android:textStyle="bold"
                     android:textColor="@android:color/black"
                     android:text="Call Center"
-                    android:textAlignment="center"
                     android:gravity="center" />
             </RelativeLayout>
 

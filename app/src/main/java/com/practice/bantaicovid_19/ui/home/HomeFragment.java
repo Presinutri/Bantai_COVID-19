@@ -1,6 +1,8 @@
 package com.practice.bantaicovid_19.ui.home;
 
 import android.content.Intent;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,8 +16,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -29,9 +29,11 @@ import com.practice.bantaicovid_19.dataclass.CallCenter;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
-import java.lang.ref.ReferenceQueue;
 import java.util.Calendar;
+
+import static com.practice.bantaicovid_19.model.SpreadDataModel.PREFERENCE_MENINGGAL;
+import static com.practice.bantaicovid_19.model.SpreadDataModel.PREFERENCE_POSITIF;
+import static com.practice.bantaicovid_19.model.SpreadDataModel.PREFERENCE_SEMBUH;
 
 public class HomeFragment extends Fragment {
 
@@ -40,19 +42,22 @@ public class HomeFragment extends Fragment {
     private View callCenter;
     public Calendar updateDate = Calendar.getInstance();
 
+    private SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-        //call view
+        // call view
         totalPositif = root.findViewById(R.id.id_positif);
         totalSembuh = root.findViewById(R.id.id_sembuh);
         totalMeninggal = root.findViewById(R.id.id_meninggal);
         progressBar = root.findViewById(R.id.progress_circular_home);
         callCenter = root.findViewById(R.id.callcenter);
 
-        //call Volley
+        // call Volley
         getSpreadData();
 
         callCenter.findViewById(R.id.callcenter).setOnClickListener(new View.OnClickListener() {
@@ -62,7 +67,7 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
-        
+
         return root;
     }
 
@@ -75,10 +80,15 @@ public class HomeFragment extends Fragment {
                 progressBar.setVisibility(View.GONE);
                 try {
                     JSONObject jsonObject = new JSONObject(response.toString());
+                    sharedPreferences = getActivity().getSharedPreferences("spread data widget", Context.MODE_PRIVATE);
+                    editor = sharedPreferences.edit();
+                    editor.putString(PREFERENCE_POSITIF, jsonObject.getString("cases"));
+                    editor.putString(PREFERENCE_SEMBUH, jsonObject.getString("recovered"));
+                    editor.putString(PREFERENCE_MENINGGAL, jsonObject.getString("deaths"));
+                    editor.apply();
 
-                    totalPositif.setText(jsonObject.getString("cases"));
-                    totalSembuh.setText(jsonObject.getString("recovered"));
-                    totalMeninggal.setText(jsonObject.getString("deaths"));
+                    // set data
+                    setSpreadData();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -91,5 +101,14 @@ public class HomeFragment extends Fragment {
             }
         });
         queue.add(request);
+
+    }
+
+    private void setSpreadData() {
+        sharedPreferences = getActivity().getSharedPreferences("spread data widget", Context.MODE_PRIVATE);
+        totalPositif.setText(sharedPreferences.getString(PREFERENCE_POSITIF, "-"));
+        totalSembuh.setText(sharedPreferences.getString(PREFERENCE_SEMBUH, "-"));
+        totalMeninggal.setText(sharedPreferences.getString(PREFERENCE_MENINGGAL, "-"));
+        Log.d("pos", sharedPreferences.getString(PREFERENCE_POSITIF, "-"));
     }
 }

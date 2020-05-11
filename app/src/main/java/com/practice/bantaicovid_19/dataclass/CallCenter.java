@@ -37,6 +37,7 @@ public class CallCenter implements Parcelable {
         dest.writeString(provinsi);
         dest.writeString(callCenter);
     }
+
     public String getProvinsi() { return provinsi; }
 
     public void setProvinsi(String provinsi) { this.provinsi = provinsi; }

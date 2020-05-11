@@ -8,10 +8,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.widget.RemoteViews;
+import android.widget.TextView;
 
 import com.practice.bantaicovid_19.R;
 
 import java.util.Calendar;
+
+import static com.practice.bantaicovid_19.model.SpreadDataModel.PREFERENCE_MENINGGAL;
+import static com.practice.bantaicovid_19.model.SpreadDataModel.PREFERENCE_POSITIF;
+import static com.practice.bantaicovid_19.model.SpreadDataModel.PREFERENCE_SEMBUH;
+
 
 /**
  * Implementation of App Widget functionality.
@@ -19,6 +25,7 @@ import java.util.Calendar;
 public class BantaiCovidWidget extends AppWidgetProvider {
 
     private static long tigaJam = 108000L;
+    private TextView widgetPositif, widgetSembuh, widgetMeninggal;
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
@@ -27,12 +34,11 @@ public class BantaiCovidWidget extends AppWidgetProvider {
         // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.bantai_covid_widget);
 
-        // Instruct the widget manager to update the widget
-        appWidgetManager.updateAppWidget(appWidgetId, views);
-
         SharedPreferences sharedPreferences = context.getSharedPreferences("spread data widget", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.apply()
+
+        views.setTextViewText(R.id.widget_positif, sharedPreferences.getString(PREFERENCE_POSITIF, "O"));
+        views.setTextViewText(R.id.widget_sembuh, sharedPreferences.getString(PREFERENCE_SEMBUH, "-"));
+        views.setTextViewText(R.id.widget_meninggal, sharedPreferences.getString(PREFERENCE_MENINGGAL, "-"));
 
         Intent intentUpdate = new Intent(context, BantaiCovidWidget.class);
         intentUpdate.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
@@ -45,13 +51,16 @@ public class BantaiCovidWidget extends AppWidgetProvider {
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
-        calendar.set(Calendar.HOUR_OF_DAY, 3)
+        calendar.set(Calendar.HOUR_OF_DAY, 3);
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 10);
 
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         alarmManager.setInexactRepeating(AlarmManager.RTC, calendar.getTimeInMillis(),
                 tigaJam*1000, pendingUpdate);
+
+        // Instruct the widget manager to update the widget
+        appWidgetManager.updateAppWidget(appWidgetId, views);
     }
 
     @Override
