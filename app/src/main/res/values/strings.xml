@@ -7,11 +7,11 @@
     <string name="call_center_title">Call Center Per Daerah</string>
     <string name="call_center_toast">Memilih daerah</string>
 
-    <string name="appwidget_text">appwidget</string>
+    <string name="appwidget_text" translatable="false">appwidget</string>
 
-    <string name="add_widget">Add widget</string>
+    <string name="add_widget" translatable="false">Add widget</string>
     <string name="update_harian_covid_19">Update Harian COVID-19</string>
-    <string name="terakhir_diperbaharui_14_april_2020">Terakhir diperbaharui 14 April 2020</string>
+    <string name="terakhir_diperbaharui_beranda">Terakhir diperbaharui 14 April 2020</string>
     <string name="positif">Positif</string>
     <string name="sembuh">Sembuh</string>
     <string name="meninggal">Meninggal</string>
@@ -30,6 +30,9 @@
     <string name="tetap_di_rumah">Tetap di\n Rumah</string>
     <string name="tidak_sentuh_mulut">Tidak Sentuh\n Mulut</string>
     <string name="list_call_center">List Call Center</string>
+    <string name="data_penyebaran_daerah_covid_19">Data Penyebaran Daerah COVID-19</string>
+    <string name="terakhir_diperbaharui_daerah">Terakhir diperbaharui 14 April 2020</string>
+    <string name="provinsi">Provinsi</string>
 
     <string-array name="tips_content">
         <item>Pandemi COVID-19 bukan hanya mengancam kesehatan fisik, tetapi juga kesehatan mental. Nah, berikut ini kami bahas cara agar tidak stres selama pandemi COVID-19 yang bikin sistem imun lebih baik.</item>

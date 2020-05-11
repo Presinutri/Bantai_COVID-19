@@ -36,7 +36,7 @@
                     android:textSize="18dp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"
-                    android:text="Data Penyebaran Daerah COVID-19"
+                    android:text="@string/data_penyebaran_daerah_covid_19"
                     />
 
                 <TextView
@@ -46,7 +46,7 @@
                     android:layout_below="@+id/listdaerah_title"
                     android:layout_marginTop="8dp"
                     android:textSize="14dp"
-                    android:text="Terakhir diperbaharui 14 April 2020"
+                    android:text="@string/terakhir_diperbaharui_daerah"
                     />
 
                 <RelativeLayout
@@ -65,7 +65,7 @@
                         android:textSize="14dp"
                         android:textStyle="bold"
                         android:textColor="@android:color/black"
-                        android:text="Provinsi"
+                        android:text="@string/provinsi"
                         android:textAlignment="center"
                         android:gravity="center"/>
 
@@ -78,8 +78,7 @@
                         android:textColor="@color/kuning"
                         android:text="P"
                         android:textAlignment="center"
-                        android:gravity="center"
-                        />
+                        android:gravity="center" />
 
                     <TextView
                         android:layout_width="50dp"
@@ -90,8 +89,7 @@
                         android:textColor="@color/hijau"
                         android:text="S"
                         android:textAlignment="center"
-                        android:gravity="center"
-                        />
+                        android:gravity="center" />
 
                     <TextView
                         android:layout_width="50dp"
@@ -102,8 +100,7 @@
                         android:textColor="@color/merah"
                         android:text="M"
                         android:textAlignment="center"
-                        android:gravity="center"
-                        />
+                        android:gravity="center" />
 
                 </RelativeLayout>
 
@@ -112,16 +109,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/list_header"
-                    tools:listitem="@layout/item_row_listdaerah"
-                    />
-
+                    tools:listitem="@layout/item_row_listdaerah" />
             </RelativeLayout>
-
         </ScrollView>
-
-
-
-
     </RelativeLayout>
-
 </RelativeLayout>

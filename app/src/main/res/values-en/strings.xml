@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bantai COVID-19</string>
+    <string name="title_home">Home</string>
+    <string name="title_tips">Interesting Tips</string>
+    <string name="title_daerah">Regional List</string>
+    <string name="call_center_title">Call Centers Per Region</string>
+    <string name="call_center_toast">Select area</string>
+    <string name="update_harian_covid_19">Daily Update COVID-19</string>
+    <string name="terakhir_diperbaharui_beranda">Last updated on April 14, 2020</string>
+    <string name="positif">Positive</string>
+    <string name="sembuh">Recovered</string>
+    <string name="meninggal">Death</string>
+    <string name="gejala_gejala">The symptoms</string>
+    <string name="demam">Fever</string>
+    <string name="rasa_lelah">Fatigue</string>
+    <string name="batuk_kering">Dry cough</string>
+    <string name="pilek">Flu</string>
+    <string name="sakit_tenggorokan">Sore throat</string>
+    <string name="diare">Diarrhea</string>
+    <string name="pencegahan">Prevention</string>
+    <string name="cuci_tangan">Washing hands</string>
+    <string name="jaga_kontak_fisik">Keep Contact  Physical</string>
+    <string name="pakai_masker">Wear a mask</string>
+    <string name="etika_bersin">Sneezing Ethics</string>
+    <string name="tetap_di_rumah">Stay at home</string>
+    <string name="tidak_sentuh_mulut">No touch  mouth</string>
+    <string name="list_call_center">Call Center List</string>
+    <string name="data_penyebaran_daerah_covid_19">Regional Spread  of COVID-19</string>
+    <string name="terakhir_diperbaharui_daerah">Last updated on April 14, 2020</string>
+    <string name="provinsi">Province</string>
+</resources>
