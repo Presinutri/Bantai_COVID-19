@@ -7,6 +7,15 @@
     android:background="@drawable/background_listdaerah"
     >
 
+    <ImageView
+        android:id="@+id/btn_settings"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/settings_icon"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentRight="true"/>
+
     <RelativeLayout
         android:id="@+id/container_region_data"
         android:layout_width="match_parent"

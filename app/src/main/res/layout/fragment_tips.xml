@@ -32,7 +32,7 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="Tips - Tips Menarik"
+                android:text="@string/tips_tips_menarik"
                 android:textSize="30dp"
                 android:textColor="@android:color/black"
                 android:textStyle="bold"
@@ -42,7 +42,7 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="Tips - Tips Menarik"
+                android:text="@string/tips_tips_menarik"
                 android:textSize="30dp"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"/>

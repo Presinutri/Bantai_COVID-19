@@ -121,8 +121,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.callcenter:
-                startActivity(new Intent(getActivity(), SettingsActivity.class));
-//                startActivity(new Intent(getActivity(), CallCenterActivity.class));
+                startActivity(new Intent(getActivity(), CallCenterActivity.class));
                 break;
             case R.id.btn_settings:
                 startActivity(new Intent(getActivity(), SettingsActivity.class));

@@ -19,12 +19,12 @@
     <string name="sakit_tenggorokan">Sore throat</string>
     <string name="diare">Diarrhea</string>
     <string name="pencegahan">Prevention</string>
-    <string name="cuci_tangan">Washing hands</string>
-    <string name="jaga_kontak_fisik">Keep Contact  Physical</string>
-    <string name="pakai_masker">Wear a mask</string>
-    <string name="etika_bersin">Sneezing Ethics</string>
+    <string name="cuci_tangan">Wash hands</string>
+    <string name="jaga_kontak_fisik">Physical distancing</string>
+    <string name="pakai_masker">Wear mask</string>
+    <string name="etika_bersin">Sneez properly</string>
     <string name="tetap_di_rumah">Stay at home</string>
-    <string name="tidak_sentuh_mulut">No touch  mouth</string>
+    <string name="tidak_sentuh_mulut">Don\'t touch</string>
     <string name="list_call_center">Call Center List</string>
     <string name="data_penyebaran_daerah_covid_19">Regional Spread  of COVID-19</string>
     <string name="terakhir_diperbaharui_daerah">Last updated on April 14, 2020</string>
@@ -35,4 +35,5 @@
     <string name="daily_notification_off">Daily Notification Off</string>
     <string name="language_settings">Settings for changing application language</string>
     <string name="daily_notification_text">Turn on or turn off daily notification</string>
+    <string name="tips_tips_menarik">Interesting Tips</string>
 </resources>
