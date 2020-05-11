@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".SettingsActivity"></activity>
 
         <receiver android:name=".widget.BantaiCovidWidget">
             <intent-filter>
@@ -23,8 +24,7 @@
         </receiver>
 
         <activity android:name=".TipsDetailActivity" />
-        <activity android:name=".CallCenterActivity"/>
-
+        <activity android:name=".CallCenterActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
