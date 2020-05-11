@@ -1,4 +1,4 @@
-package com.practice.bantaicovid_19.widget;
+package com.practice.bantaicovid_19;
 
 import androidx.appcompat.app.AppCompatActivity;
 

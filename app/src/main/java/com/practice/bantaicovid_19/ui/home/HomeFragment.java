@@ -1,15 +1,18 @@
 package com.practice.bantaicovid_19.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -21,6 +24,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.practice.bantaicovid_19.R;
+import com.practice.bantaicovid_19.dataclass.CallCenter;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -33,6 +37,7 @@ public class HomeFragment extends Fragment {
 
     private TextView totalPositif, totalSembuh, totalMeninggal;
     private ProgressBar progressBar;
+    private View callCenter;
     public Calendar updateDate = Calendar.getInstance();
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -45,9 +50,18 @@ public class HomeFragment extends Fragment {
         totalSembuh = root.findViewById(R.id.id_sembuh);
         totalMeninggal = root.findViewById(R.id.id_meninggal);
         progressBar = root.findViewById(R.id.progress_circular_home);
+        callCenter = root.findViewById(R.id.callcenter);
 
         //call Volley
         getSpreadData();
+
+        callCenter.findViewById(R.id.callcenter).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(getActivity(),CallCenter.class);
+                startActivity(intent);
+            }
+        });
         
         return root;
     }
@@ -77,7 +91,5 @@ public class HomeFragment extends Fragment {
             }
         });
         queue.add(request);
-
-
     }
 }
