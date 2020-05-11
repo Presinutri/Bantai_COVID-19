@@ -23,6 +23,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.practice.bantaicovid_19.CallCenterActivity;
 import com.practice.bantaicovid_19.R;
 import com.practice.bantaicovid_19.dataclass.CallCenter;
 
@@ -63,7 +64,7 @@ public class HomeFragment extends Fragment {
         callCenter.findViewById(R.id.callcenter).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getActivity(),CallCenter.class);
+                Intent intent =new Intent(getActivity(), CallCenterActivity.class);
                 startActivity(intent);
             }
         });
