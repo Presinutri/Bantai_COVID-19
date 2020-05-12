@@ -27,8 +27,8 @@
     <string name="jaga_kontak_fisik">Jaga Kontak\n Fisik</string>
     <string name="pakai_masker">Pakai Masker</string>
     <string name="etika_bersin">Etika Bersin</string>
-    <string name="tetap_di_rumah">Tetap di Rumah</string>
-    <string name="tidak_sentuh_mulut">Tidak Sentuh Mulut</string>
+    <string name="tetap_di_rumah">Tetap di\nRumah</string>
+    <string name="tidak_sentuh_mulut">Tidak Sentuh\nMulut</string>
     <string name="list_call_center">List Call Center</string>
 
     <string name="data_penyebaran_daerah_covid_19">Data Penyebaran Daerah COVID-19</string>
