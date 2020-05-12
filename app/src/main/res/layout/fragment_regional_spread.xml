@@ -20,7 +20,7 @@
         android:id="@+id/container_region_data"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="220dp"
         android:background="@drawable/white_background"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
